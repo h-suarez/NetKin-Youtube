@@ -1,0 +1,13 @@
+#* Archivos generados por Python
+*.pyc
+__pycache__/
+
+#* Archivos generados por la biblioteca de virtualenv
+venv/
+
+#* Archivos de configuración de IDEs
+*.idea/
+
+#* Archivos generados por pip
+dist/
+build/
