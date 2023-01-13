@@ -1,4 +1,4 @@
-# pyinstaller -F --onefile --windowed --name="Netkin Youtube" --hidden-import=youtube_dl netkin_youtube.py
+# pyinstaller -F --onefile --name="Netkin YouTube" --icon="favicon.ico" netkin_youtube.py
 import os
 from tkinter import *
 from tkinter import messagebox
