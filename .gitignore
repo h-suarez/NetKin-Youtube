@@ -3,7 +3,7 @@
 __pycache__/
 
 #* Archivos generados por la biblioteca de virtualenv
-venv/
+env/
 
 #* Archivos de configuración de IDEs
 *.idea/
