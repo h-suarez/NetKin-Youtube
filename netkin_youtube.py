@@ -2,7 +2,9 @@
 import os
 from tkinter import *
 from tkinter import messagebox
-from youtube_dl import YoutubeDL as ydl, DownloadError
+#from youtube_dl import YoutubeDL as ydl, DownloadError
+from yt_dlp import YoutubeDL as ydl, DownloadError, DownloadCancelled
+
 
 #* Ruta de descarga
 rootDownload = '\\'.join(os.getcwd().split('\\')[:3]) + r'\Downloads'
@@ -86,6 +88,9 @@ def downloadVideo():
     except DownloadError as e:
         print('El video a descargar no esta disponible o no existe: ', e)
         showMessage(2, 'El video a descargar no esta disponible o no existe.')
+    except DownloadCancelled as e:
+        print('Se detuvo el proceso de descarga: ', e)
+        showMessage(2, 'Se detuvo el proceso de descarga.')
     except Exception as e:
         print('Ocurrion un problema: ', e)
         showMessage(2, 'Ocurrion un problema.')
@@ -104,6 +109,9 @@ def downloadAudio():
     except DownloadError as e:
         print('El video a descargar no esta disponible o no existe: ', e)
         showMessage(2, 'El video a descargar no esta disponible o no existe.')
+    except DownloadCancelled as e:
+        print('Se detuvo el proceso de descarga: ', e)
+        showMessage(2, 'Se detuvo el proceso de descarga.')
     except Exception as e:
         print('Ocurrion un problema: ', e)
         showMessage(2, 'Ocurrion un problema.')

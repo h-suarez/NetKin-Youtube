@@ -11,3 +11,4 @@ env/
 #* Archivos generados por pip
 dist/
 build/
+*.spec
