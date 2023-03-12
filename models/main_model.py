@@ -22,11 +22,7 @@ class MainMenu(QWidget):
     def generarFormulario(self):
         lb.generateTitle(self)
         lb.generateLabelUrl(self)
-        lb.generateLabelUser(self)
-        lb.generateLabelPassword(self)
         ip.GenerateInputs.generateInputUrl(self, self.initDownload)
-        ip.GenerateInputs.generateInputUser(self)
-        ip.GenerateInputs.generateInputPassword(self)
         rd.GenerateRadios.generateNetworks(self)
         rd.GenerateRadios.generateOptionsOfDownload(self)
         bt.generateButtonDownload(self, self.initDownload)

@@ -21,23 +21,3 @@ class GenerateInputs():
     
     def cleanUrl(self):
         self.urlInput.clear()
-    
-    def generateInputUser(self):
-        self.urlInputU = QLineEdit(self)
-        self.urlInputU.resize(400, 30)
-        self.urlInputU.move(90, 224)
-        self.urlInputU.setStyleSheet(st.styleSheetInput)
-        self.urlInputU.setFont(st.fontInputs)
-        self.urlInputU.setClearButtonEnabled(True)
-        self.urlInputU.setFrame(False)
-        self.urlInputU.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-    def generateInputPassword(self):
-        self.urlInputP = QLineEdit(self)
-        self.urlInputP.resize(400, 30)
-        self.urlInputP.move(90, 274)
-        self.urlInputP.setStyleSheet(st.styleSheetInput)
-        self.urlInputP.setFont(st.fontInputs)
-        self.urlInputP.setClearButtonEnabled(True)
-        self.urlInputP.setFrame(False)
-        self.urlInputP.setAlignment(Qt.AlignmentFlag.AlignCenter)

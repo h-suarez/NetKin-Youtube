@@ -14,17 +14,3 @@ def generateLabelUrl(self):
     urlLabel.setFont(st.fontLabUrl)
     urlLabel.move(30, 130)
     urlLabel.setStyleSheet(st.styleSheetLabel)
-
-def generateLabelUser(self):
-    userLabel = QLabel(self)
-    userLabel.setText('User:')
-    userLabel.setFont(st.fontLabUrl)
-    userLabel.move(30, 230)
-    userLabel.setStyleSheet(st.styleSheetLabel)
-
-def generateLabelPassword(self):
-    claveLabel = QLabel(self)
-    claveLabel.setText('Clave:')
-    claveLabel.setFont(st.fontLabUrl)
-    claveLabel.move(30, 280)
-    claveLabel.setStyleSheet(st.styleSheetLabel)

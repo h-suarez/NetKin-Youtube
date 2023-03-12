@@ -16,7 +16,7 @@ def generateButtonDownload(self, download):
 def generateBtnVideos(self, openVids):
     btnVideos = QPushButton('Ver videos', self)
     btnVideos.resize(150, 30)
-    btnVideos.move(180, 340)
+    btnVideos.move(180, 240)
     btnVideos.setStyleSheet(st.styleSheetBtnOpenVid)
     sombra = QGraphicsDropShadowEffect(self)
     sombra.setBlurRadius(30)
@@ -27,7 +27,7 @@ def generateBtnVideos(self, openVids):
 def generateBtnAudios(self, openAudi):
     btnAudios = QPushButton('Ver audios', self)
     btnAudios.resize(150, 30)
-    btnAudios.move(350, 340)
+    btnAudios.move(350, 240)
     btnAudios.setStyleSheet(st.styleSheetBtnOpenAud)
     sombra = QGraphicsDropShadowEffect(self)
     sombra.setBlurRadius(30)
