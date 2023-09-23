@@ -217,4 +217,5 @@ btnOpenVid.place(x=255, y=180)
 
 principal.mainloop()
 
-#* pip freeze > requirements.txt => Para generar en un txt las librerias que se deben instalar
+#* pip freeze > requirements.txt => Para generar en un txt los modulos que se deben instalar
+#* pip install -r requirements.txt => Para instalar los modulos que estan en el txt

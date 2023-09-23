@@ -5,7 +5,7 @@ def getFont(font: str, size: int):
 
 #* Variables compartidas:
 
-iconApp = r'yticon.ico'
+iconApp = r'./yticon.ico'
 #* Iniciar de izquierda a derecha => x1: 1, y1: 1
 #* Iniciar de arriba hacia abajo  => x1: 0, y1: 0
 gradientUi = 'background: qlineargradient(x1: 1, y1: 1, x2: 0, y2: 1, stop: 0 #6f0000, stop: 1 #200122);'
