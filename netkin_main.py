@@ -11,3 +11,5 @@ if __name__ == '__main__':
 # Entorno virtual:
 # py -m venv env
 # .venv\Scripts\activate
+# Ejemplo para actualizar un modulo
+# pip install --upgrade yt-dlp
