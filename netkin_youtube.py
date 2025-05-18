@@ -11,21 +11,27 @@ rootDownload = '\\'.join(os.getcwd().split('\\')[:3]) + r'\Downloads'
 
 #* Formatos de descarga
 formatoAudio = {
-    "format" : "bestaudio[ext=m4a]",
-    'quiet' : False,
-    "postprocessors" : [{
-        "key": "FFmpegExtractAudio",
-        "preferredcodec"  : "m4a",
-        "preferredquality"  : '192'
+    'format': 'bestaudio[ext=m4a]/bestaudio',  # Prioriza m4a, si no existe usa otro formato de audio
+    'outtmpl': f'{rootDownload}\\Audios\\%(title)s.%(ext)s',
+    'postprocessors': [{  # Conversión adicional para asegurar formato m4a
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'm4a',
+        'preferredquality': '320',  # Máxima calidad para AAC
     }],
-    "extractaudio": False,
-    "outtmpl"     : f'{rootDownload}\\Audios\\' + "/%(title)s.%(ext)s",
+    'embed-thumbnail': True,  # Incrusta miniatura (opcional)
+    'embed-metadata': True,   # Metadatos (título, artista)
 }
 formatoVideo = {
-    "format" : "best",
-    'quiet' : False,
-    "extractaudio": False,
-    "outtmpl"     : f'{rootDownload}\\Videos\\' + "/%(title)s.%(ext)s",
+    'format': 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best',
+    'outtmpl': f'{rootDownload}\\Videos\\%(title)s.%(ext)s',
+    'merge-output-format': 'mp4',  # Fuerza contenedor MP4
+    'postprocessors': [{  # Asegura compatibilidad universal
+        'key': 'FFmpegVideoConvertor',
+        'preferedformat': 'mp4',  # Conversión adicional si es necesario
+    }],
+    'embed-thumbnail': True,       # Miniatura incrustada
+    'embed-subs': True,            # Subtítulos (opcional)
+    'sub-langs': 'es,en',         # Idiomas preferidos
 }
 
 def showMessage(nivel, msg):
